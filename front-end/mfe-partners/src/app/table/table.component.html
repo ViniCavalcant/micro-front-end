@@ -1,0 +1,38 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>Created At</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Repository Git</th>
+        <th>URL Document</th>
+        <th>Clients</th>
+        <th>Projects</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let partner of partners">
+        <td>{{ partner.createdAt }}</td>
+        <td>{{ partner.name }}</td>
+        <td>{{ partner.description }}</td>
+        <td>{{ partner.repositoryGit }}</td>
+        <td>{{ partner.urlDoc }}</td>
+        <td>
+          <ul>
+            <li *ngFor="let client of partner.clients">{{ client }}</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li *ngFor="let project of partner.projects">{{ project }}</li>
+          </ul>
+        </td>
+        <td>
+          <button (click)="editPartner(partner.id)" class="btn btn-edit">Edit</button>
+          <button (click)="deletePartner(partner.id)" class="btn btn-delete">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+</table>
+  
