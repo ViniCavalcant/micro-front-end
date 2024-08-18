@@ -1,50 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-
-interface Partner {
-  createdAt: string;
-  name: string;
-  description: string;
-  repositoryGit: string;
-  urlDoc: string;
-  clients: any[];
-  projects: any[];
-  id: string;
-}
+import { Component, Input, OnInit } from '@angular/core';
+import { Partner } from '../../../../main-app/projects/host/src/app/models/partner';
 
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss']
 })
-export class TableComponent implements OnInit {
-  partners: Partner[] = [
-    {
-      createdAt: '2023-08-24T18:52:48.369Z',
-      name: 'Parceiro 333',
-      description: 'Para que serve essa parceria',
-      repositoryGit: 'Link do repositório do git',
-      urlDoc: 'awww.parceiro45.com',
-      clients: [
-        'Banco da Galera', 'Alegria Bankers', ',D)uUsW(4T', 67226, 612,
-        73382, 13160, '|*:n[Ta;02', 'PMPzA91WyQ', '<fYM\\ssJxK'
-      ],
-      projects: [
-        'Coban', 'Teddy360', '!RM&1Np{NM', 80739, '#1U?@I8{69', 36092,
-        "K'Bn`9HOlu", 94077, 52122
-      ],
-      id: '93'
-    }
-  ];
+export class TableComponent {
+  @Input() partners: Partner[] = [];
 
   constructor() { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    console.log('Partners data:', this.partners);
+  }
 
   editPartner(id: string): void {
     console.log('Edit partner with id:', id);
+    // Adicione lógica de edição aqui
   }
 
   deletePartner(id: string): void {
     console.log('Delete partner with id:', id);
+    // Adicione lógica de exclusão aqui
   }
 }
