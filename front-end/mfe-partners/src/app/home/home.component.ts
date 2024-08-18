@@ -19,7 +19,7 @@ export class HomeComponent {
   
   getPartners(): void{
     this.partnersService.getPartners().subscribe(
-      (partners) => (this.partners = partners)
+      (partners) => (this.partners = partners.slice(0, 3))
     );
   }
 }
