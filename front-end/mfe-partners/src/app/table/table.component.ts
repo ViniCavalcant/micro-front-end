@@ -38,7 +38,6 @@ import { Partner } from '../../../../main-app/projects/host/src/app/models/partn
 })
 export class TableComponent implements AfterViewInit {
   @Input() partners: Partner[] = [];
-  displayedColumns: string[] = ['createdAt', 'name', 'description', 'repositoryGit', 'urlDoc', 'clients', 'projects', 'actions'];
   dataSource = new MatTableDataSource<Partner>(this.partners);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
