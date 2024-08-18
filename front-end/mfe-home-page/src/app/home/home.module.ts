@@ -2,7 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
-import { FormsModule } from '@angular/forms';
+import { CardComponent } from '../card/card.component';
 
 const routes: Routes = [
   {
@@ -12,7 +12,14 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [HomeComponent],
-  imports: [FormsModule, CommonModule, RouterModule.forChild(routes)],
+  declarations: [
+    HomeComponent,
+    CardComponent
+  ],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes)
+  ],
+  exports: []
 })
 export class HomeModule {}
