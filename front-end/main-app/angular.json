@@ -3,57 +3,37 @@
 	"version": 1,
 	"newProjectRoot": "projects",
 	"projects": {
-		"main-app": {
+		"host": {
 			"projectType": "application",
 			"schematics": {
-				"@schematics/angular:class": {
-					"skipTests": true
-				},
 				"@schematics/angular:component": {
-					"skipTests": true
-				},
-				"@schematics/angular:directive": {
-					"skipTests": true
-				},
-				"@schematics/angular:guard": {
-					"skipTests": true
-				},
-				"@schematics/angular:interceptor": {
-					"skipTests": true
-				},
-				"@schematics/angular:pipe": {
-					"skipTests": true
-				},
-				"@schematics/angular:resolver": {
-					"skipTests": true
-				},
-				"@schematics/angular:service": {
-					"skipTests": true
+					"style": "scss"
 				}
 			},
-			"root": "",
-			"sourceRoot": "src",
+			"root": "projects/host",
+			"sourceRoot": "projects/host/src",
 			"prefix": "app",
 			"architect": {
 				"build": {
 					"builder": "ngx-build-plus:browser",
 					"options": {
-						"outputPath": "dist/main-app",
-						"index": "src/index.html",
-						"main": "src/main.ts",
+						"outputPath": "dist/host",
+						"index": "projects/host/src/index.html",
+						"main": "projects/host/src/main.ts",
 						"polyfills": [
 							"zone.js"
 						],
-						"tsConfig": "tsconfig.app.json",
+						"tsConfig": "projects/host/tsconfig.app.json",
+						"inlineStyleLanguage": "scss",
 						"assets": [
-							"src/favicon.ico",
-							"src/assets"
+							"projects/host/src/favicon.ico",
+							"projects/host/src/assets"
 						],
 						"styles": [
-							"src/styles.css"
+							"projects/host/src/styles.scss"
 						],
 						"scripts": [],
-						"extraWebpackConfig": "webpack.config.js",
+						"extraWebpackConfig": "projects/host/webpack.config.js",
 						"commonChunk": false
 					},
 					"configurations": {
@@ -71,7 +51,7 @@
 								}
 							],
 							"outputHashing": "all",
-							"extraWebpackConfig": "webpack.prod.config.js"
+							"extraWebpackConfig": "projects/host/webpack.prod.config.js"
 						},
 						"development": {
 							"buildOptimizer": false,
@@ -88,25 +68,25 @@
 					"builder": "ngx-build-plus:dev-server",
 					"configurations": {
 						"production": {
-							"browserTarget": "main-app:build:production",
-							"extraWebpackConfig": "webpack.prod.config.js"
+							"buildTarget": "host:build:production",
+							"extraWebpackConfig": "projects/host/webpack.prod.config.js"
 						},
 						"development": {
-							"browserTarget": "main-app:build:development"
+							"buildTarget": "host:build:development"
 						}
 					},
 					"defaultConfiguration": "development",
 					"options": {
 						"port": 4200,
 						"publicHost": "http://localhost:4200",
-						"extraWebpackConfig": "webpack.config.js"
+						"extraWebpackConfig": "projects/host/webpack.config.js"
 					}
 				},
 				"extract-i18n": {
 					"builder": "ngx-build-plus:extract-i18n",
 					"options": {
-						"browserTarget": "main-app:build",
-						"extraWebpackConfig": "webpack.config.js"
+						"buildTarget": "host:build",
+						"extraWebpackConfig": "projects/host/webpack.config.js"
 					}
 				},
 				"test": {
@@ -116,18 +96,22 @@
 							"zone.js",
 							"zone.js/testing"
 						],
-						"tsConfig": "tsconfig.spec.json",
+						"tsConfig": "projects/host/tsconfig.spec.json",
+						"inlineStyleLanguage": "scss",
 						"assets": [
-							"src/favicon.ico",
-							"src/assets"
+							"projects/host/src/favicon.ico",
+							"projects/host/src/assets"
 						],
 						"styles": [
-							"src/styles.css"
+							"projects/host/src/styles.scss"
 						],
 						"scripts": []
 					}
 				}
 			}
 		}
+	},
+	"cli": {
+		"analytics": false
 	}
 }

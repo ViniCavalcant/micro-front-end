@@ -1,0 +1,135 @@
+.section{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    
+    width: 100%;
+    height: 100vh;
+    padding: 0 200px;
+    
+    background-color: #000;
+
+    .content{
+        display: flex;
+        justify-content: flex-start; 
+        align-items: flex-start;
+        gap: 80px;
+    
+        .text{
+            justify-content: left;
+            color: #ed145b;
+            width: 400px;
+    
+            h1{
+                font-family: Orbitron;
+                font-weight: 800;
+                font-size: 48px;
+                padding-bottom: 16px;
+            }
+    
+            p{
+                font-family: Inter;
+                font-weight: 400;
+                color: #fff;
+            }
+        }
+
+        .login-form {
+            display: flex;
+            justify-content: left;
+            flex-direction: column;
+
+            gap: 20px;
+            width: 400px;
+            margin-top: 32px;
+        
+            .input-field {
+                padding: 16px;
+                font-size: 16px;
+                font-family: Inter;
+                font-weight: 600;
+                
+                color: #fff;
+                background-color: transparent;
+                border: 2px solid #ed145b;
+                border-radius: 4px;
+
+                outline: none;
+                transition: all 0.3s ease;
+            }
+            
+            .input-field::placeholder {
+                color: #fff;
+                opacity: 0.7;
+            }
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: Inter;
+            color: #fff;
+
+            .checkbox-field {
+                width: 20px;
+                height: 20px;
+                position: relative;
+
+                background-color: transparent;
+                border: 2px solid #ed145b;
+                border-radius: 4px;
+                appearance: none;
+
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .checkbox-field:checked {
+                background-color: #ed145b;
+                border-color: #ed145b;
+            }
+            
+            .checkbox-field:checked::after {
+                position: absolute;
+                left: 3px;
+                top: -1px;
+                
+                color: #fff;
+                font-size: 12px;
+                
+                content: '✓';
+            }
+
+            label {
+                cursor: pointer;
+            }
+        }
+    
+        .buttons{
+            button {
+                background-color: #ed145b;
+                color: white;
+                
+                margin-top: 32px;
+                padding: 16px 32px;
+                border-radius: 2px;
+                border: none;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                
+                font-size: 16px;
+                font-family: Inter;
+                
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+
+                &:hover {
+                    background-color: #c0124a;
+                    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+                }
+            } 
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.container{
+    position: fixed;
+    display: flex;    
+    width: 100%;
+    padding: 24px 200px;
+    justify-content: space-between;
+    color: #fff;
+    background-color: #161616;
+    box-shadow: 0 8px 8px #3b06174f;
+    z-index: 1000;
+
+    .logo img {
+        max-height: 40px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .links{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-family: Inter;
+
+        .link{
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: #ed145b
+            }
+        }
+    }
+}

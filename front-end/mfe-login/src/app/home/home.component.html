@@ -1,0 +1,27 @@
+<div class="section">
+    <div class="content">
+        <div class="text">
+            <h1>Login</h1>
+            <p>Insira os seus dados nos campos ao lado para acessar a pagina principal</p>
+        </div>
+
+        <div class="login-form">
+            <input #userInput type="text" placeholder="Nome de usuário" class="input-field" />
+            <input #passwordInput type="password" placeholder="Senha" class="input-field" />
+
+            <div class="checkbox-container">
+                <input 
+                    #keepConnectedInput  
+                    type="checkbox" 
+                    id="keep-connected" 
+                    class="checkbox-field" 
+                />
+                <label for="keep-connected">Manter conectado</label>
+            </div>
+
+            <div class="buttons">
+                <button (click)="login(userInput, passwordInput, keepConnectedInput)">Entrar</button>
+            </div>
+        </div>
+    </div>
+</div>
