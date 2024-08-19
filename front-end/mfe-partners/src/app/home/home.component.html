@@ -10,6 +10,18 @@
         <h1>Parceiros</h1>
         <p>Aqui você encontra todas as ações de parceiros da aplicação.</p>
       </div>
+
+      <div class="login-form">
+        <!-- <input #userInput type="text" placeholder="Id" class="input-field" /> -->
+        <input [(ngModel)]="userName" name="userName" #userName type="text" placeholder="Nome" class="input-field" />
+        <input [(ngModel)]="description" name="description" #description type="text" placeholder="Descrição" class="input-field" />
+        <input [(ngModel)]="repositorygit" name="repositorygit" #repositorygit type="text" placeholder="Repositório Git" class="input-field" />
+        <input [(ngModel)]="urldoc" name="urldoc" #urldoc type="text" placeholder="URL do documento" class="input-field" />        
+
+        <div class="buttons">
+          <button>Criar</button>
+        </div>
+      </div>
   
       <app-table [partners]="partners" (delete)="openDeleteModal($event)">
       </app-table>

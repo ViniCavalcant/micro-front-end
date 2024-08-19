@@ -19,7 +19,7 @@ const routes: Routes = [
   declarations: [
     HomeComponent, 
     TableComponent,
-    ModalDeleteComponent
+    ModalDeleteComponent,
   ],
   imports: [
     CommonModule, 
