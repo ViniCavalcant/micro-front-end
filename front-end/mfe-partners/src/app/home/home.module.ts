@@ -2,14 +2,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatIconModule } from '@angular/material/icon';
-
 import { HomeComponent } from './home.component';
 import { TableComponent } from '../table/table.component';
+import { ModalComponent } from './../../../../main-app/projects/host/src/app/modal/modal.component';
+
 
 const routes: Routes = [
   {
@@ -21,17 +17,14 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     HomeComponent,
-    TableComponent
+    TableComponent,
+    ModalComponent,
   ],
   imports: [
     CommonModule,
-    MatSlideToggleModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatButtonModule,
-    MatIconModule,
     RouterModule.forChild(routes)
   ],
   exports: []
 })
-export class HomeModule {}
+export class HomeModule {
+}

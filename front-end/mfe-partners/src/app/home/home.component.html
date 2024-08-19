@@ -4,7 +4,9 @@
             <h1>Parceiros</h1>
             <p>Aqui você encontra todas as ações de parceiros da aplicação.</p>
         </div>
-
-        <app-table [partners]="partners"></app-table>
+    
+        <app-table [partners]="partners" (delete)="openDeleteModal($event)"></app-table>
+        <app-modal></app-modal>
     </div>
 </div>
+  

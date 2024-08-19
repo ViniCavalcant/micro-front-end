@@ -1,5 +1,3 @@
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
-
 .table {
   width: 100%;
   margin: 20px 0;
@@ -9,6 +7,9 @@
 
   font-family: Inter;
   font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap; /* Força apenas uma linha na célula */
+
 
   thead {
     background-color: #161616;
@@ -21,16 +22,27 @@
 
   tbody {
     tr {
+      max-width: 100%;
+
       td {
+        max-width: 160px;
+        max-height: 100px;
         padding: 16px;
+
         background-color: #2b2b2b;
         border-bottom: 2px solid #161616;
+        
+        font-family: Inter;
+        font-size: 12px;
+        font-weight: 400;
 
-        ul {
-          padding: 0;
-          margin: 0;
-          list-style: none;
-        }
+        white-space: normal; /* Permite quebras de linha dentro da célula */
+        white-space: nowrap; /* Força apenas uma linha na célula */
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
       }
 
       .btn {
@@ -38,18 +50,18 @@
         margin-right: 8px;
 
         border: none;
-        border-radius: 4px;
+        border-radius: 2px;
         
         cursor: pointer;
         font-size: 14px;
         
         &.btn-edit {
-          background-color: #4caf4fc9;
+          background-color: #c6f1c7;
           color: white;
         }
 
         &.btn-delete {
-          background-color: #f44336b2;
+          background-color: #ed145b;
           color: white;
         }
 
@@ -60,4 +72,3 @@
     }
   }
 }
-  
