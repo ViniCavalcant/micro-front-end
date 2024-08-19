@@ -18,7 +18,7 @@ export class PartnersService {
 
   editPartner(id: string, partner: Partner): Observable<Partner> {
     return this.httpClient.put<Partner>(`${this.apiUrl}/${id}`, partner);
-  }
+  }  
 
   deletePartner(id: string): Observable<void> {
     return this.httpClient.delete<void>(`${this.apiUrl}/${id}`);

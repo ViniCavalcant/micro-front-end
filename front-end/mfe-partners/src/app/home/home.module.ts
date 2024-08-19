@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { TableComponent } from '../table/table.component';
 import { ModalComponent } from './../../../../main-app/projects/host/src/app/modal/modal.component';
+import { FormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -16,12 +17,13 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    TableComponent,
-    ModalComponent,
+    HomeComponent, 
+    TableComponent, 
+    ModalComponent
   ],
   imports: [
-    CommonModule,
+    CommonModule, 
+    FormsModule, 
     RouterModule.forChild(routes)
   ],
   exports: []
