@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Partner } from '../../../../main-app/projects/host/src/app/models/partner';
 
 @Component({
@@ -8,10 +8,14 @@ import { Partner } from '../../../../main-app/projects/host/src/app/models/partn
 })
 export class TableComponent {
   @Input() partners: Partner[] = [];
+  @Output() edit = new EventEmitter<Partner>();
+  @Output() delete = new EventEmitter<Partner>();
 
-  onEdit(id: string): void {
+  onEdit(partner: Partner): void {
+    this.edit.emit(partner);
   }
 
-  onDelete(id: string): void {
+  onDelete(partner: Partner): void {
+    this.delete.emit(partner);
   }
 }

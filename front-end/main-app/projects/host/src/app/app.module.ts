@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { AdminComponent } from './admin/admin.component';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ModalComponent } from './modal/modal.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -15,7 +14,6 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     AdminComponent,
     HeaderComponent,
-    ModalComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,95 @@
+.modal {
+  width: 600px;
+  padding: 40px;
+  background-color: #2b2b2b;
+  border-radius: 4px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    h2 {
+      font-size: 24px;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+
+      &:hover {
+        color: #ed145b;
+      }
+    }
+  }
+
+  .modal-body {
+    margin-bottom: 40px;
+
+    p {
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px; // Espaçamento entre os botões
+
+    button {
+      padding: 16px 32px;
+      border-radius: 2px;
+      border: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &.btn-cancel {
+        background-color: #666163;
+        color: white;
+
+        &:hover {
+          background-color: #4d4b4a;
+        }
+      }
+
+      &.btn-confirm {
+        background-color: #ed145b;
+        color: white;
+
+        &:hover {
+          background-color: #c0124a;
+        }
+      }
+    }
+  }
+
+  // Backdrop style
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+}

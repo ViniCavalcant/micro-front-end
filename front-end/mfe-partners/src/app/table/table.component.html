@@ -21,10 +21,10 @@
       <td>{{ item.clients.join(', ') }}</td>
       <td>{{ item.projects.join(', ') }}</td>
       <td>
-        <button (click)="onEdit(item.id)" class="btn btn-edit">
+        <button (click)="onEdit(item)" class="btn btn-edit">
           <span class="material-symbols-outlined">edit</span>
         </button>
-        <button (click)="onDelete(item.id)" class="btn btn-delete">
+        <button (click)="onDelete(item)" class="btn btn-delete">
           <span class="material-symbols-outlined">delete</span>
         </button>        
       </td>
