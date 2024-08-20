@@ -1,0 +1,29 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Data de Criação</th>
+            <th>Nome da companhia</th>
+            <th>Contas de colaboradores</th>
+            <th>Atividade da conta</th>
+            <th>URL do documento</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of externalCompanies">
+            <td>{{ item.createdAt | date: 'medium' }}</td>
+            <td>{{ item.companyName }}</td>
+            <td>{{ item.collaboratorsCount }}</td>
+            <td>{{ item.isActive }}</td>
+            <td>{{ item.lastSubmit }}</td>
+            <td>
+                <button (click)="onEdit(item)" class="btn btn-edit">
+                    <span class="material-symbols-outlined">edit</span>
+                </button>
+                <button (click)="onDelete(item)" class="btn btn-delete">
+                    <span class="material-symbols-outlined">delete</span>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

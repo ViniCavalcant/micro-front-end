@@ -1,4 +1,10 @@
 @import '../../global-variables.scss';
+@mixin apply-font($font-map) {
+    font-family: map-get($font-map, font-family);
+    font-size: map-get($font-map, font-size);
+    font-weight: map-get($font-map, font-weight);
+}
+
 .container{
     position: fixed;
     display: flex;    
@@ -19,8 +25,9 @@
     .links{
         display: flex;
         align-items: center;
+
         gap: 20px;
-        font-family: Inter;
+        @include apply-font($inter-16);
 
         .link{
             cursor: pointer;

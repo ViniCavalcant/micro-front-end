@@ -1,4 +1,9 @@
 @import '../../../../main-app/projects/host/src/global-variables.scss';
+@mixin apply-font($font-map) {
+    font-family: map-get($font-map, font-family);
+    font-size: map-get($font-map, font-size);
+    font-weight: map-get($font-map, font-weight);
+}
 .section{
     display: flex;
     justify-content: flex-start;
@@ -19,15 +24,12 @@
             max-width: 1600px;
 
             h1{
-                font-family: Orbitron;
-                font-weight: 800;
-                font-size: 48px;
+                @include apply-font($orbitron-48);
                 padding-bottom: 16px;
             }
 
             p{
-                font-family: Inter;
-                font-weight: 400;
+                @include apply-font($inter-24);
                 color: $neutral-100;
             }
         }

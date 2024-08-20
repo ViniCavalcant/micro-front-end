@@ -1,0 +1,43 @@
+@import '../../../../main-app/projects/host/src/global-variables.scss';
+@mixin apply-font($font-map) {
+    font-family: map-get($font-map, font-family);
+    font-size: map-get($font-map, font-size);
+    font-weight: map-get($font-map, font-weight);
+}
+.card {
+    display: flex;
+    align-items: end;
+
+    width: 200px;
+    height: 200px;
+    margin-top: 40px;
+
+    border: 2px solid $primary-color;
+    border-radius: 8px;
+
+    .content {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        
+        width: 100%;
+        padding: 12px;
+
+        background-color: $neutral-10;
+        border-radius: 0 0 5px 5px;
+
+        position: relative;
+        box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+
+        .color-name {
+            padding-bottom: 16px;
+            color: $neutral-100;
+            @include apply-font($orbitron-16);
+        }
+
+        .color-variable {
+            color: $neutral-100;
+            @include apply-font($inter-16);
+        }
+    }
+}

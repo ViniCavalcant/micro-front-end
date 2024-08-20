@@ -1,11 +1,15 @@
 @import '../../global-variables.scss';
+@mixin apply-font($font-map) {
+  font-family: map-get($font-map, font-family);
+  font-size: map-get($font-map, font-size);
+  font-weight: map-get($font-map, font-weight);
+}
 .modal {
   width: 600px;
   padding: 40px;
   background-color: $neutral-20;
   border-radius: 4px;
   color: $neutral-100;
-  font-family: 'Inter', sans-serif;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -20,8 +24,7 @@
     margin-bottom: 16px;
 
     h2 {
-      font-size: 24px;
-      font-weight: 800;
+      @include apply-font($inter-24);
       margin: 0;
     }
 
@@ -42,23 +45,21 @@
     margin-bottom: 40px;
 
     p {
-      font-size: 16px;
-      font-weight: 300;
+      @include apply-font($inter-16);
     }
   }
 
   .modal-footer {
     display: flex;
     justify-content: flex-end;
-    gap: 16px; // Espaçamento entre os botões
+    gap: 16px;
 
     button {
       padding: 16px 32px;
       border-radius: 2px;
       border: none;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      font-size: 16px;
-      font-family: 'Inter', sans-serif;
+      @include apply-font($inter-16);
       cursor: pointer;
       transition: all 0.3s ease;
 
@@ -82,7 +83,6 @@
     }
   }
 
-  // Backdrop style
   &::before {
     content: '';
     position: fixed;

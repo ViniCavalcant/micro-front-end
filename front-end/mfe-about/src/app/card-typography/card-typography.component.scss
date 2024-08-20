@@ -1,0 +1,33 @@
+@import '../../../../main-app/projects/host/src/global-variables.scss';
+@mixin apply-font($font-map) {
+    font-family: map-get($font-map, font-family);
+    font-size: map-get($font-map, font-size);
+    font-weight: map-get($font-map, font-weight);
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        min-width: 260px; 
+        min-height: 140px;
+        padding: 12px;
+
+        background-color: $neutral-10;
+        border-radius: 8px;
+
+        .font-name {
+            color: $neutral-100;
+        }
+
+        .info-text {
+            color: $neutral-100;
+            @include apply-font($inter-16);
+        }
+    }
+}

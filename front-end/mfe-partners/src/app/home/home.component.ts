@@ -30,14 +30,12 @@ export class HomeComponent {
       this.partnersService.deletePartner(this.selectedPartner.id).subscribe(() => {
         this.getPartners();
         this.isDeleteModalOpen = false;
-        this.selectedPartner = null;  // Clear the selected partner after deletion
+        this.selectedPartner = null;
       });
     }
   }
 
-  // Adicione o método onEdit para lidar com a edição
   onEdit(partner: Partner): void {
-    // Implemente a lógica de edição aqui
     console.log('Edit partner:', partner);
   }
 }

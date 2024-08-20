@@ -1,4 +1,9 @@
 @import '../../../../main-app/projects/host/src/global-variables.scss';
+@mixin apply-font($font-map) {
+    font-family: map-get($font-map, font-family);
+    font-size: map-get($font-map, font-size);
+    font-weight: map-get($font-map, font-weight);
+}
 .section {
     display: flex;
     justify-content: center;
@@ -23,9 +28,7 @@
             h1 {
                 padding-bottom: 16px;
                 color: $primary-color;
-                font-family: Orbitron;
-                font-weight: 800;
-                font-size: 48px;
+                @include apply-font($orbitron-48);
                 margin: 0;
             }
         }
@@ -40,9 +43,7 @@
 
             p {
                 color: $neutral-100;
-                font-family: Inter;
-                font-weight: 400;
-                font-size: 24px;
+                @include apply-font($inter-24);
             }
         }
 
@@ -53,19 +54,64 @@
             width: 100%;
 
             .ilustration {
-                max-width: 45%; // Ajusta o tamanho máximo da ilustração
+                max-width: 45%;
                 display: flex;
                 justify-content: center;
 
                 img {
-                    max-width: 100%; // Garante que a imagem não ultrapasse o contêiner
-                    height: auto; // Mantém a proporção da imagem
-                    border-radius: 4px; // Adiciona um arredondamento opcional às bordas da imagem
+                    max-width: 100%; 
+                    height: auto; 
+                    border-radius: 4px; 
                 }
             }
 
             .text {
-                max-width: 45%; // Ajusta o tamanho máximo do texto
+                max-width: 45%;
+            }
+        }
+
+        .variables-contant {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .variables-title{
+                display: flex;
+                width: 100%;
+                justify-content: start;
+
+                text-align: start;
+                
+                p {
+                    color: $neutral-100;
+                    @include apply-font($inter-40);
+                }
+            }
+
+            .subtitle {
+                display: flex;
+                width: 100%;
+                justify-content: start;
+                text-align: start;
+                padding-top: 40px;
+
+                p {
+                    color: $neutral-100;
+                    @include apply-font($inter-40);
+                }
+            }
+
+            .color-cards {
+                width: 100%;
+                gap: 20px;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .typography-cards{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             }
         }
     }

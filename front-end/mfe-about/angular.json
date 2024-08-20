@@ -68,11 +68,11 @@
 					"builder": "ngx-build-plus:dev-server",
 					"configurations": {
 						"production": {
-							"browserTarget": "mfe-about:build:production",
+							"buildTarget": "mfe-about:build:production",
 							"extraWebpackConfig": "webpack.prod.config.js"
 						},
 						"development": {
-							"browserTarget": "mfe-about:build:development"
+							"buildTarget": "mfe-about:build:development"
 						}
 					},
 					"defaultConfiguration": "development",
@@ -85,7 +85,7 @@
 				"extract-i18n": {
 					"builder": "ngx-build-plus:extract-i18n",
 					"options": {
-						"browserTarget": "mfe-about:build",
+						"buildTarget": "mfe-about:build",
 						"extraWebpackConfig": "webpack.config.js"
 					}
 				},

@@ -40,8 +40,8 @@ module.exports = {
         mfelogin: "http://localhost:5000/remoteEntry.js",
         mfehomepage: "http://localhost:5002/remoteEntry.js",
         mfepartners: "http://localhost:5003/remoteEntry.js",
+        mfeexternalcompanies: "http://localhost:5004/remoteEntry.js",
         mfeabout: "http://localhost:5005/remoteEntry.js",
-        // mfeexternalcompany: "http://localhost:5004/remoteEntry.js",
       },
 
       shared: share({
