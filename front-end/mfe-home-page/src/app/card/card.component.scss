@@ -20,19 +20,12 @@
         background-color: $primary-color
     }
 
-    .category {
-        margin-bottom: 8px;
-        color: $neutral-50;
-        font-family: 'Inter';
-        font-size: 12px;
-        display: block;
-    }
-
     .title {
         color: $neutral-100;
         font-family: 'Orbitron';
         font-size: 24px;
-        margin: 16px 0;
+        margin: 8px 0;
+        padding-bottom: 8px;
     }
 
     .subtitle {

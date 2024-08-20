@@ -70,6 +70,169 @@
             }
         }
 
+        .figma-contant {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        
+            .title {
+                display: flex;
+                width: 100%;
+                justify-content: start;
+                text-align: start;
+        
+                p {
+                    color: $neutral-100;
+                    @include apply-font($inter-40);
+                }
+            }
+        
+            .description {
+                display: flex;
+                flex-direction: column;
+        
+                .figma-text p {
+                    width: 100%;
+                    padding-top: 40px;
+                    @include apply-font($inter-24);
+                    color: $neutral-100;
+                }
+        
+                .content-images {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top: 40px;
+                    flex-wrap: wrap;
+        
+                    .image-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        max-width: 30%;
+                        flex-grow: 1;
+        
+                        .image-text {
+                            text-align: center;
+                            padding-bottom: 10px;
+                            @include apply-font($inter-24);
+                            color: $neutral-100;
+                        }
+        
+                        img {
+                            max-width: 100%;
+                            height: auto;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .figma-link{
+            display: flex;
+            justify-content: end;
+
+            .external-link-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 240px;
+                height: 72px;
+                padding: 20px;
+                margin-top: 40px;
+                position: relative;
+
+                background-color: $neutral-10;
+                color: $neutral-100;
+                @include apply-font($inter-16);
+                
+                border-radius: 4px;
+                text-decoration: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: background-color 0.3s ease;
+            
+                &:hover {
+                    background-color: $primary-color;
+                }
+            
+                .figma-icon {
+                    width: 32px;
+                    height: auto;
+                    margin-right: 10px;
+                }
+            
+                .button-text {
+                    flex-grow: 1;
+                    text-align: center;
+                }
+            
+                .external-icon {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    width: 16px;
+                    height: auto;
+                }
+            }        
+        
+            @media (max-width: 768px) {
+            .figma-contant .content-images {
+                flex-direction: column;
+                align-items: center;
+        
+                .image-wrapper {
+                    max-width: 100%;
+                }
+            }
+            }
+        }    
+        
+.mfe-contant {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .title {
+        display: flex;
+        width: 100%;
+        justify-content: start;
+        text-align: start;
+
+        p {
+            color: $neutral-100;
+            @include apply-font($inter-40);
+        }
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .figma-text p {
+            width: 100%;
+            padding-top: 40px;
+            @include apply-font($inter-24);
+            color: $neutral-100;
+        }
+
+        .content-images {
+            display: flex;
+            justify-content: center; 
+            width: 100%;
+            padding-top: 40px;
+            overflow: hidden;
+
+            img {
+                width: 100%; 
+                height: auto;
+                display: block;
+            }
+        }
+    }
+}
+
+
         .variables-contant {
             display: flex;
             flex-direction: column;
