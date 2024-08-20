@@ -1,3 +1,4 @@
+@import '../../../../main-app/projects/host/src/global-variables.scss';
 .section{
     display: flex;
     justify-content: flex-start;
@@ -7,14 +8,14 @@
     height: 100vh;
     padding: 320px 10%;
     
-    background-color: #000;
+    background-color: $neutral-00;
 
     .content{
         gap: 80px;
 
         .text{
             justify-content: left;
-            color: #ed145b;
+            color: $primary-color;
             max-width: 1600px;
 
             h1{
@@ -27,7 +28,7 @@
             p{
                 font-family: Inter;
                 font-weight: 400;
-                color: #fff;
+                color: $neutral-100;
             }
         }
 

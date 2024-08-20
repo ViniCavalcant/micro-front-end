@@ -1,18 +1,19 @@
+@import '../../../../main-app/projects/host/src/global-variables.scss';
 .table {
   width: 100%;
   margin: 20px 0;
 
-  color: #fff;
+  color: $neutral-100;
   border-collapse: collapse;
 
   font-family: Inter;
   font-size: 16px;
   font-weight: 600;
-  white-space: nowrap; /* Força apenas uma linha na célula */
+  white-space: nowrap;
 
 
   thead {
-    background-color: #161616;
+    background-color: $neutral-10;
 
     th {
       padding: 16px;
@@ -29,8 +30,8 @@
         max-height: 100px;
         padding: 4px 16px;
 
-        background-color: #2b2b2b;
-        border-bottom: 1px solid #161616;
+        background-color: $neutral-20;
+        border-bottom: 1px solid $neutral-10;
         
         font-family: Inter;
         font-size: 12px;
@@ -56,13 +57,13 @@
         font-size: 14px;
         
         &.btn-edit {
-          background-color: #666163;
-          color: white;
+          background-color: $neutral-40;
+          color: $neutral-100;
         }
 
         &.btn-delete {
-          background-color: #ed145b;
-          color: white;
+          background-color: $primary-color;
+          color: $neutral-100;
         }
 
         &:hover {

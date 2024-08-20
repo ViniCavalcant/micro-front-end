@@ -22,17 +22,17 @@ const routes: Routes = [
     loadChildren: () =>
       import('mfepartners/homeModule').then((module) => module.HomeModule),
   },
+  {
+    path: 'mfeabout',
+    loadChildren: () =>
+      import('mfeabout/homeModule').then((module) => module.HomeModule),
+  },
+];
   // {
   //   path: 'mfeexternalcompany',
   //   loadChildren: () =>
   //     import('mfeexternalcompany/homeModule').then((module) => module.HomeModule),
   // },
-  // {
-  //   path: 'mfeabout',
-  //   loadChildren: () =>
-  //     import('mfeabout/homeModule').then((module) => module.HomeModule),
-  // },
-];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

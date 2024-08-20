@@ -1,3 +1,5 @@
+@import '../../global-variables.scss';
+
 .section{
     display: flex;
     justify-content: flex-start;
@@ -7,7 +9,7 @@
     height: 100vh;
     padding: 400px 10%;
     
-    background-color: #000000;
+    background-color: $neutral-00;
 
     .content{
         display: flex;
@@ -17,7 +19,7 @@
     
         .text{
             justify-content: left;
-            color: #ed145b;
+            color: $primary-color;
     
             h1{
                 font-family: Orbitron;
@@ -29,14 +31,14 @@
             p{
                 font-family: Inter;
                 font-weight: 400;
-                color: #fff;
+                color: $neutral-100;
             }
         }
     
         .buttons{
             button {
-                background-color: #ed145b;
-                color: white;
+                background-color: $primary-color;
+                color: $neutral-100;
                 
                 margin-top: 32px;
                 padding: 16px 32px;
@@ -52,7 +54,7 @@
 
 
                 &:hover {
-                    background-color: #c0124a;
+                    background-color: $secondary-color;
                     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
                 }
             } 

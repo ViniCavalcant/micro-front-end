@@ -1,9 +1,10 @@
+@import '../../global-variables.scss';
 .modal {
   width: 600px;
   padding: 40px;
-  background-color: #2b2b2b;
+  background-color: $neutral-20;
   border-radius: 4px;
-  color: white;
+  color: $neutral-100;
   font-family: 'Inter', sans-serif;
   position: fixed;
   top: 50%;
@@ -27,12 +28,12 @@
     .close-btn {
       background: none;
       border: none;
-      color: white;
+      color: $neutral-100;
       font-size: 24px;
       cursor: pointer;
 
       &:hover {
-        color: #ed145b;
+        color: $primary-color;
       }
     }
   }
@@ -62,20 +63,20 @@
       transition: all 0.3s ease;
 
       &.btn-cancel {
-        background-color: #666163;
-        color: white;
+        background-color: $neutral-40;
+        color: $neutral-100;
 
         &:hover {
-          background-color: #4d4b4a;
+          background-color: $neutral-30;
         }
       }
 
       &.btn-confirm {
-        background-color: #ed145b;
-        color: white;
+        background-color: $primary-color;
+        color: $neutral-100;
 
         &:hover {
-          background-color: #c0124a;
+          background-color: $secondary-color;
         }
       }
     }
