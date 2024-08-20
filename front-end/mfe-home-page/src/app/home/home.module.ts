@@ -1,3 +1,4 @@
+import { HeaderAplicationComponent } from './../../../../main-app/projects/host/src/app/header-aplication/header-aplication.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -15,6 +16,7 @@ const routes: Routes = [
   declarations: [
     HomeComponent,
     CardComponent,
+    HeaderAplicationComponent
   ],
   imports: [
     CommonModule,

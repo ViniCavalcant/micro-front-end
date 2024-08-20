@@ -1,3 +1,4 @@
+import { HeaderLoginComponent } from './../../../../main-app/projects/host/src/app/header-login/header-login.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -12,7 +13,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, HeaderLoginComponent],
   imports: [FormsModule, CommonModule, RouterModule.forChild(routes)],
 })
 export class HomeModule {}

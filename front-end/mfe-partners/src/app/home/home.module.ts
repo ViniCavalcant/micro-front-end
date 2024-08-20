@@ -1,3 +1,4 @@
+import { HeaderAplicationComponent } from './../../../../main-app/projects/host/src/app/header-aplication/header-aplication.component';
 import { ModalDeleteComponent } from './../../../../main-app/projects/host/src/app/modal-delete/modal-delete.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -20,6 +21,7 @@ const routes: Routes = [
     HomeComponent, 
     TableComponent,
     ModalDeleteComponent,
+    HeaderAplicationComponent
   ],
   imports: [
     CommonModule, 
