@@ -17,7 +17,7 @@ export class HomeComponent {
   }
 
   getPartners(): void {
-    this.partnersService.getPartners().subscribe(partners => this.partners = partners.slice(0, 10));
+    this.partnersService.getPartners().subscribe(partners => this.partners = partners.slice(0, 20));
   }
 
   openDeleteModal(partner: Partner): void {

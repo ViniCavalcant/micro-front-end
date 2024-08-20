@@ -17,7 +17,7 @@ export class HomeComponent {
   }
 
   getExternalCompanies(): void {
-    this.externalCompaniesService.getExternalCompanies().subscribe(externalCompanies => this.externalCompanies = externalCompanies.slice(0, 10));
+    this.externalCompaniesService.getExternalCompanies().subscribe(externalCompanies => this.externalCompanies = externalCompanies.slice(0, 20));
   }
 
 
