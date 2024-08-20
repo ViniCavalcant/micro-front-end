@@ -3,39 +3,41 @@
     justify-content: flex-start;
 
     width: 100%;
-    height: 100%;
-    padding: 10% 200px;
+    height: 100vh;
+    padding: 120px 10%;
     background-color: #000;
 
     .content{
-        gap: 80px;
+        display: flex;
+        flex-direction: column; // Alinha o conteúdo em coluna
+        width: 100%; // Faz com que o conteúdo ocupe toda a largura da section
+        height: calc(100% - 120px * 2); // Subtrai o padding superior e inferior para ajustar a altura
 
         .text{
             justify-content: left;
-            color: #ed145b;
             max-width: 1600px;
+            color: #ed145b;
 
             h1{
+                padding-bottom: 16px;
                 font-family: Orbitron;
                 font-weight: 800;
                 font-size: 48px;
-                padding-bottom: 16px;
             }
 
             p{
+                color: #fff;
                 font-family: Inter;
                 font-weight: 400;
-                color: #fff;
             }
         }
 
         .login-form {
             display: flex;
             justify-content: left;
-
-            gap: 20px;
             width: 400px;
-            margin-top: 32px;
+            padding-top: 40px;
+            gap: 20px;
         
             .input-field {
                 padding: 16px;
