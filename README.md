@@ -58,6 +58,6 @@ Além disso, o projeto foi planejado para ser construído utilizando a arquitetu
   ng serve host
 ```
 
-## Documentação
+## Protótipo do projeto
 
 [Figma](https://www.figma.com/design/FEgAh0KSFzKnUhCyVsw2iD/Micro-Front-End-Project?node-id=0-1) - Acesse o figma para ver a ideação do projeto, antes da aplicação ser feita.
