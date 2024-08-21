@@ -9,7 +9,7 @@ Além disso, o projeto foi planejado para ser construído utilizando a arquitetu
 
 ## Instruções para rodar o projeto
 
-#### Clonando repositório
+### Clonando repositório
 
 #### HTTPS
 ```
@@ -28,7 +28,7 @@ Além disso, o projeto foi planejado para ser construído utilizando a arquitetu
 
 
 
-#### Inicializando o projeto
+### Inicializando o projeto
 
 #### Acesse as pastas do projeto até chegar neste caminho:
 ```
@@ -37,7 +37,7 @@ Além disso, o projeto foi planejado para ser construído utilizando a arquitetu
 
 
 
-#### Inicializando o servidor
+### Inicializando o servidor
 
 #### Rode o comando ng serve host para inicializar a aplicação principal:
 ```
@@ -46,7 +46,7 @@ Além disso, o projeto foi planejado para ser construído utilizando a arquitetu
 
 
 
-#### Inicializando outros micro front-ends
+### Inicializando outros micro front-ends
 
 #### Acesse as pastas do projeto até chegar neste caminho:
 ```
